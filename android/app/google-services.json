@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1078011620725",
+    "project_id": "device-streaming-a5c4b159",
+    "storage_bucket": "device-streaming-a5c4b159.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078011620725:android:7bbc885fbb8c3e8b14b73c",
+        "android_client_info": {
+          "package_name": "com.example.phonebooth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3x5H4wJZFy4WduAQWHpwbglZ8KYPU13o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
