@@ -5,7 +5,12 @@ import 'screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  try {
+    await Firebase.initializeApp();
+  } catch (e) {
+    print('Failed to initialize Firebase: $e');
+    // Handle initialization error appropriately
+  }
 
   // Remove debug banner
   SystemChrome.setSystemUIOverlayStyle(
@@ -33,7 +38,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.green[700],
           elevation: 0,
           centerTitle: true,
-          iconTheme: const IconTheme.of(context).copyWith(color: Colors.white),
+          iconTheme: const IconThemeData(color: Colors.white), // Fixed this line
           titleTextStyle: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -61,8 +66,8 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.white, // Updated order for deprecated params
             backgroundColor: Colors.green[700],
-            foregroundColor: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8),
             ),

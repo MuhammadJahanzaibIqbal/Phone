@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import '../models/contact.dart';
 import '../services/database_service.dart';
 import './add_contact_screen.dart';
 import './contact_details_screen.dart';
 import './feedback_screen.dart';
 import '../widgets/contact_card.dart';
-import '../widgets/search_bar.dart';
+// Removed the unused search_bar.dart import
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
